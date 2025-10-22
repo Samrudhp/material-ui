@@ -1,7 +1,7 @@
 ---
 productId: material-ui
 title: React Slider component
-components: Slider
+components: Slider, EnhancedSlider
 githubLabel: 'scope: slider'
 materialDesign: https://m2.material.io/components/sliders
 waiAria: https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/
@@ -144,6 +144,16 @@ In the following demo, the value _x_ represents the value _2^x_.
 Increasing _x_ by one increases the represented value by factor _2_.
 
 {{"demo": "NonLinearSlider.js"}}
+
+## Enhanced slider
+
+The Enhanced Slider extends the base Slider component with additional features for better user experience:
+
+- **Auto-generated marks**: Automatically displays marks at regular intervals
+- **Enhanced tooltips**: Improved value display with custom formatting
+- **Range selection**: Built-in support for range sliders with descriptive labels
+
+{{"demo": "EnhancedSliderDemo.js"}}
 
 ## Accessibility
 

@@ -1,0 +1,194 @@
+{
+  "componentDescription": "Enhanced Slider Component\n\nBuilds on Material-UI's Slider with:\n- Custom marks with auto-generation\n- Enhanced tooltips with custom formatting\n- Range selection with descriptive labels\n- Better default UX for common use cases",
+  "propDescriptions": {
+    "range": {
+      "description": "If <code>true</code>, the slider will support range selection with two thumbs."
+    },
+    "customMarks": {
+      "description": "Custom marks to display on the slider. If not provided, marks will be auto-generated."
+    },
+    "showMarks": { "description": "If <code>true</code>, marks will be displayed on the slider." },
+    "showTooltips": {
+      "description": "If <code>true</code>, tooltips will be displayed when hovering over the thumbs."
+    },
+    "min": { "description": "The minimum allowed value of the slider." },
+    "max": { "description": "The maximum allowed value of the slider." },
+    "step": { "description": "The granularity with which the slider can step through values." },
+    "valueLabelFormat": {
+      "description": "A function to format the value displayed in tooltips and aria labels.",
+      "typeDescriptions": {
+        "value": { "name": "value", "description": "The value to format" },
+        "index": { "name": "index", "description": "The index of the thumb (for range sliders)" }
+      }
+    },
+    "formatValueLabel": {
+      "description": "Alias for valueLabelFormat for backward compatibility.",
+      "typeDescriptions": {
+        "value": { "name": "value", "description": "The value to format" },
+        "index": { "name": "index", "description": "The index of the thumb (for range sliders)" }
+      }
+    },
+    "rangeLabels": { "description": "Labels for range slider thumbs." },
+    "value": {
+      "description": "The value of the slider. For range sliders, provide an array with two values."
+    },
+    "defaultValue": {
+      "description": "The default value. Use when the component is not controlled."
+    }
+  },
+  "classDescriptions": {
+    "active": {
+      "description": "State class applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "it&#39;s active"
+    },
+    "colorError": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"error\"</code>"
+    },
+    "colorInfo": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"info\"</code>"
+    },
+    "colorPrimary": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"primary\"</code>"
+    },
+    "colorSecondary": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"secondary\"</code>"
+    },
+    "colorSuccess": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"success\"</code>"
+    },
+    "colorWarning": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>color=\"warning\"</code>"
+    },
+    "disabled": {
+      "description": "State class applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root and thumb element",
+      "conditions": "<code>disabled={true}</code>"
+    },
+    "dragging": {
+      "description": "State class applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root",
+      "conditions": "a thumb is being dragged"
+    },
+    "focusVisible": {
+      "description": "State class applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "keyboard focused"
+    },
+    "mark": { "description": "Styles applied to {{nodeName}}.", "nodeName": "the mark element" },
+    "markActive": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the mark element",
+      "conditions": "active (depending on the value)"
+    },
+    "marked": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>marks</code> is provided with at least one label"
+    },
+    "markLabel": {
+      "description": "Styles applied to {{nodeName}}.",
+      "nodeName": "the mark label element"
+    },
+    "markLabelActive": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the mark label element",
+      "conditions": "active (depending on the value)"
+    },
+    "rail": { "description": "Styles applied to {{nodeName}}.", "nodeName": "the rail element" },
+    "root": { "description": "Styles applied to the root element." },
+    "sizeSmall": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>size=\"small\"</code>"
+    },
+    "thumb": { "description": "Styles applied to {{nodeName}}.", "nodeName": "the thumb element" },
+    "thumbColorError": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"error\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorError\">.MuiSlider-colorError</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbColorInfo": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"info\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorInfo\">.MuiSlider-colorInfo</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbColorPrimary": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"primary\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorPrimary\">.MuiSlider-colorPrimary</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbColorSecondary": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"secondary\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorSecondary\">.MuiSlider-colorSecondary</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbColorSuccess": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"success\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorSuccess\">.MuiSlider-colorSuccess</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbColorWarning": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>color=\"warning\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-colorWarning\">.MuiSlider-colorWarning</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "thumbSizeSmall": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb element",
+      "conditions": "<code>size=\"small\"</code>",
+      "deprecationInfo": "Combine the <a href=\"/material-ui/api/slider/#slider-classes-thumb\">.MuiSlider-thumb</a> and <a href=\"/material-ui/api/slider/#slider-classes-sizeSmall\">.MuiSlider-sizeSmall</a> classes instead. See <a href=\"/material-ui/migration/migrating-from-deprecated-apis/\">Migrating from deprecated APIs</a> for more details."
+    },
+    "track": { "description": "Styles applied to {{nodeName}}.", "nodeName": "the track element" },
+    "trackFalse": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>track={false}</code>"
+    },
+    "trackInverted": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>track=\"inverted\"</code>"
+    },
+    "valueLabel": {
+      "description": "Styles applied to {{nodeName}}.",
+      "nodeName": "the thumb label element"
+    },
+    "valueLabelCircle": {
+      "description": "Styles applied to {{nodeName}}.",
+      "nodeName": "the thumb label&#39;s circle element"
+    },
+    "valueLabelLabel": {
+      "description": "Styles applied to {{nodeName}}.",
+      "nodeName": "the thumb label&#39;s label element"
+    },
+    "valueLabelOpen": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the thumb label element",
+      "conditions": "it&#39;s open"
+    },
+    "vertical": {
+      "description": "Styles applied to {{nodeName}} if {{conditions}}.",
+      "nodeName": "the root element",
+      "conditions": "<code>orientation=\"vertical\"</code>"
+    }
+  }
+}

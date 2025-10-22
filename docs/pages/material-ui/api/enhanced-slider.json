@@ -1,0 +1,260 @@
+{
+  "props": {
+    "customMarks": {
+      "type": { "name": "arrayOf", "description": "Array&lt;{ value: number, label?: node }&gt;" }
+    },
+    "defaultValue": {
+      "type": { "name": "union", "description": "Array&lt;number&gt;<br>&#124;&nbsp;number" }
+    },
+    "formatValueLabel": {
+      "type": { "name": "func" },
+      "signature": {
+        "type": "function(value: number, index: number) => string",
+        "describedArgs": ["value", "index"]
+      }
+    },
+    "max": { "type": { "name": "number" }, "default": "100" },
+    "min": { "type": { "name": "number" }, "default": "0" },
+    "range": { "type": { "name": "bool" }, "default": "false" },
+    "rangeLabels": { "type": { "name": "shape", "description": "{ min?: string, max?: string }" } },
+    "showMarks": { "type": { "name": "bool" }, "default": "true" },
+    "showTooltips": { "type": { "name": "bool" }, "default": "true" },
+    "step": { "type": { "name": "number" }, "default": "1" },
+    "value": {
+      "type": { "name": "union", "description": "Array&lt;number&gt;<br>&#124;&nbsp;number" }
+    },
+    "valueLabelFormat": {
+      "type": { "name": "func" },
+      "signature": {
+        "type": "function(value: number, index: number) => string",
+        "describedArgs": ["value", "index"]
+      }
+    }
+  },
+  "name": "EnhancedSlider",
+  "imports": [
+    "import EnhancedSlider from '@mui/material/Slider';",
+    "import { EnhancedSlider } from '@mui/material';"
+  ],
+  "classes": [
+    {
+      "key": "active",
+      "className": "Mui-active",
+      "description": "State class applied to the thumb element if it's active.",
+      "isGlobal": true
+    },
+    {
+      "key": "colorError",
+      "className": "MuiEnhancedSlider-colorError",
+      "description": "Styles applied to the root element if `color=\"error\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "colorInfo",
+      "className": "MuiEnhancedSlider-colorInfo",
+      "description": "Styles applied to the root element if `color=\"info\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "colorPrimary",
+      "className": "MuiEnhancedSlider-colorPrimary",
+      "description": "Styles applied to the root element if `color=\"primary\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "colorSecondary",
+      "className": "MuiEnhancedSlider-colorSecondary",
+      "description": "Styles applied to the root element if `color=\"secondary\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "colorSuccess",
+      "className": "MuiEnhancedSlider-colorSuccess",
+      "description": "Styles applied to the root element if `color=\"success\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "colorWarning",
+      "className": "MuiEnhancedSlider-colorWarning",
+      "description": "Styles applied to the root element if `color=\"warning\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "disabled",
+      "className": "Mui-disabled",
+      "description": "State class applied to the root and thumb element if `disabled={true}`.",
+      "isGlobal": true
+    },
+    {
+      "key": "dragging",
+      "className": "MuiEnhancedSlider-dragging",
+      "description": "State class applied to the root if a thumb is being dragged.",
+      "isGlobal": false
+    },
+    {
+      "key": "focusVisible",
+      "className": "Mui-focusVisible",
+      "description": "State class applied to the thumb element if keyboard focused.",
+      "isGlobal": true
+    },
+    {
+      "key": "mark",
+      "className": "MuiEnhancedSlider-mark",
+      "description": "Styles applied to the mark element.",
+      "isGlobal": false
+    },
+    {
+      "key": "markActive",
+      "className": "MuiEnhancedSlider-markActive",
+      "description": "Styles applied to the mark element if active (depending on the value).",
+      "isGlobal": false
+    },
+    {
+      "key": "marked",
+      "className": "MuiEnhancedSlider-marked",
+      "description": "Styles applied to the root element if `marks` is provided with at least one label.",
+      "isGlobal": false
+    },
+    {
+      "key": "markLabel",
+      "className": "MuiEnhancedSlider-markLabel",
+      "description": "Styles applied to the mark label element.",
+      "isGlobal": false
+    },
+    {
+      "key": "markLabelActive",
+      "className": "MuiEnhancedSlider-markLabelActive",
+      "description": "Styles applied to the mark label element if active (depending on the value).",
+      "isGlobal": false
+    },
+    {
+      "key": "rail",
+      "className": "MuiEnhancedSlider-rail",
+      "description": "Styles applied to the rail element.",
+      "isGlobal": false
+    },
+    {
+      "key": "root",
+      "className": "MuiEnhancedSlider-root",
+      "description": "Styles applied to the root element.",
+      "isGlobal": false
+    },
+    {
+      "key": "sizeSmall",
+      "className": "MuiEnhancedSlider-sizeSmall",
+      "description": "Styles applied to the root element if `size=\"small\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "thumb",
+      "className": "MuiEnhancedSlider-thumb",
+      "description": "Styles applied to the thumb element.",
+      "isGlobal": false
+    },
+    {
+      "key": "thumbColorError",
+      "className": "MuiEnhancedSlider-thumbColorError",
+      "description": "Styles applied to the thumb element if `color=\"error\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbColorInfo",
+      "className": "MuiEnhancedSlider-thumbColorInfo",
+      "description": "Styles applied to the thumb element if `color=\"info\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbColorPrimary",
+      "className": "MuiEnhancedSlider-thumbColorPrimary",
+      "description": "Styles applied to the thumb element if `color=\"primary\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbColorSecondary",
+      "className": "MuiEnhancedSlider-thumbColorSecondary",
+      "description": "Styles applied to the thumb element if `color=\"secondary\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbColorSuccess",
+      "className": "MuiEnhancedSlider-thumbColorSuccess",
+      "description": "Styles applied to the thumb element if `color=\"success\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbColorWarning",
+      "className": "MuiEnhancedSlider-thumbColorWarning",
+      "description": "Styles applied to the thumb element if `color=\"warning\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "thumbSizeSmall",
+      "className": "MuiEnhancedSlider-thumbSizeSmall",
+      "description": "Styles applied to the thumb element if `size=\"small\"`.",
+      "isGlobal": false,
+      "isDeprecated": true
+    },
+    {
+      "key": "track",
+      "className": "MuiEnhancedSlider-track",
+      "description": "Styles applied to the track element.",
+      "isGlobal": false
+    },
+    {
+      "key": "trackFalse",
+      "className": "MuiEnhancedSlider-trackFalse",
+      "description": "Styles applied to the root element if `track={false}`.",
+      "isGlobal": false
+    },
+    {
+      "key": "trackInverted",
+      "className": "MuiEnhancedSlider-trackInverted",
+      "description": "Styles applied to the root element if `track=\"inverted\"`.",
+      "isGlobal": false
+    },
+    {
+      "key": "valueLabel",
+      "className": "MuiEnhancedSlider-valueLabel",
+      "description": "Styles applied to the thumb label element.",
+      "isGlobal": false
+    },
+    {
+      "key": "valueLabelCircle",
+      "className": "MuiEnhancedSlider-valueLabelCircle",
+      "description": "Styles applied to the thumb label's circle element.",
+      "isGlobal": false
+    },
+    {
+      "key": "valueLabelLabel",
+      "className": "MuiEnhancedSlider-valueLabelLabel",
+      "description": "Styles applied to the thumb label's label element.",
+      "isGlobal": false
+    },
+    {
+      "key": "valueLabelOpen",
+      "className": "MuiEnhancedSlider-valueLabelOpen",
+      "description": "Styles applied to the thumb label element if it's open.",
+      "isGlobal": false
+    },
+    {
+      "key": "vertical",
+      "className": "MuiEnhancedSlider-vertical",
+      "description": "Styles applied to the root element if `orientation=\"vertical\"`.",
+      "isGlobal": false
+    }
+  ],
+  "spread": true,
+  "themeDefaultProps": true,
+  "muiName": "MuiEnhancedSlider",
+  "forwardsRefTo": "HTMLSpanElement",
+  "filename": "/packages/mui-material/src/Slider/EnhancedSlider.js",
+  "inheritance": null,
+  "demos": "<ul><li><a href=\"/material-ui/react-slider/\">Slider</a></li></ul>",
+  "cssComponent": false
+}
